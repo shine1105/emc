@@ -11,7 +11,8 @@ export const organizationsSchema = z.object({
   zipCode: z.string().min(1, 'Zip code is required'),
   countryId: z.number().int().positive('Country ID must be a positive integer'),
   contactDetails: z.string().optional(),
-  billingEmail: z.string().email('Invalid email format').optional()      
+  billingEmail: z.string().email('Invalid email format').optional()  ,
+  supportEmail: z.string().email('Invalid email format').optional()    
 });
 
 export default organizationsSchema;
